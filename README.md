@@ -8,6 +8,8 @@ PyTorch C++/CUDA扩展模块，用于图注意力网络(GAT)的高性能计算�
 GAT_cuda/
 ├── set_up.py              # python库构建脚本
 ├── test_gat_extension.py  # 在python中运行c++实现的gat相关函数
+├── run.py                 # 测速脚本
+├── read_files.py          # 用于读取cora数据集和citeseer数据集
 ├── README.md              # 项目说明
 ├── include/
 │   ├── gat_layer.h        # GAT层头文件
@@ -47,5 +49,6 @@ python test_gat_extension.py
 ```bash
 export LD_LIBRARY_PATH=$(python -c "import torch, os; print(os.path.join(os.path.dirname(torch.__file__), 'lib'))"):$LD_LIBRARY_PATH
 ```
+
 
 ### 2.运行`run.py`统计时间
